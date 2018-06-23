@@ -39,7 +39,7 @@ const IndexPage = () => (
       <li>Высоко квалифицированные менторы</li>
     </ul>
     <p>Сайт находится в разработке. По всем вопросом писать на:</p>
-    <a href="mailto:mordorreal@gmail.com">mordorreal@gmail.com</a>
+    <a href="mailto:info@gmentor.online">info@gmentor.online</a>
   </Layout>
 )
 
