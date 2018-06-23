@@ -1,0 +1,33 @@
+{
+  "name": "GMentor",
+  "description": "Learning portal",
+  "version": "0.1.0",
+  "author": "Denis Savchuk <mordorreal@gmail.com>",
+  "dependencies": {
+    "gatsby": "next",
+    "gatsby-plugin-google-analytics": "^1.0.31",
+    "gatsby-plugin-nprogress": "^1.0.14",
+    "gatsby-plugin-react-helmet": "next",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gmentor learning portal"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "prettier": "^1.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mordorreal/gmentor.git"
+  }
+}
