@@ -1,0 +1,52 @@
+.second-screen-component {
+  @include mobile {
+    padding: rem(25px) rem(5px) 0;
+    max-width: 100%;
+  }
+
+  @include tablet {
+    padding: rem(50px) rem(25px) 0;
+    max-width: 100%;
+  }
+
+  @include desktop-small {
+    padding: rem(50px) rem(25px) 0;
+    max-width: 100%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: rem(50px) rem(40px) 0;
+  background: $main-yellow;
+
+  &__title {
+    margin: 0 0 rem(50px);
+  }
+
+  &__text {
+    @include mobile {
+      display: none;
+    }
+
+    color: $main-grey;
+    font-family: $text-font;
+    font-size: $font-size-20px;
+    line-height: rem(34px);
+    margin: 0 auto rem(60px);
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    margin: 0 0 rem(30px);
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.testimonials-button-component {
+  background: $main-grey;
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+
+  &_active {
+    background: none;
+    border: 1px solid $main-blue;
+  }
+}

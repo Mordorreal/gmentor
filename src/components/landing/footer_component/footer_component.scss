@@ -1,0 +1,65 @@
+.footer-component {
+  @include mobile {
+    justify-content: space-between;
+    padding: 1.07143rem .5rem;
+  }
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  @include desktop-small {
+    max-width: 100%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  height: rem(150px);
+  margin: 0 auto;
+  padding: rem(42px) rem(60px) 0;
+  background: $main-yellow;
+
+  &__row {
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: space-between;
+    max-height: rem(30px);
+    max-width: 100%;
+
+    &_is-centered {
+      align-items: center;
+    }
+  }
+
+  &__text {
+    color: $main-grey;
+    font-family: $title-font;
+    font-size: $font-size-16px;
+    letter-spacing: rem(1px);
+    line-height: rem(20px);
+    text-transform: uppercase;
+  }
+
+  &__links {
+    @include mobile {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      height: rem(120px);
+      justify-content: center;
+    }
+
+    font-family: $title-font;
+    font-size: $font-size-14px;
+    line-height: rem(18px);
+    text-align: end;
+
+    a {
+      @include mobile {
+        margin: 0 rem(3px);
+      }
+
+      margin: 0 rem(5px);
+    }
+  }
+}

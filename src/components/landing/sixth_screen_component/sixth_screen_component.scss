@@ -1,0 +1,19 @@
+.sixth-screen-component {
+  @include mobile {
+    padding: 0 rem(5px);
+  }
+
+  align-items: center;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  height: rem(318px);
+
+  &__title {
+    margin: rem(67px) 0 rem(40px);
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,42 @@
+.forth-screen-component {
+  @include mobile {
+    background: none;
+    height: rem(420px);
+    padding: 0 rem(5px);
+  }
+
+  @include tablet {
+    background-position: 0% 30%;
+    background-size: 17%;
+  }
+
+  @include desktop-small {
+    background-position: 0% 30%;
+    background-size: 17%;
+  }
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: rem(662px);
+
+  &__title {
+    @include mobile {
+      margin: rem(30px) 0 rem(37px);
+    }
+
+    margin: rem(50px) 0 rem(37px);
+  }
+
+  &__video {
+    iframe {
+      @include mobile {
+        height: 100%;
+        width: 100%;
+      }
+
+      height: rem(360px);
+      width: rem(640px);
+    }
+  }
+}

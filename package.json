@@ -4,20 +4,26 @@
   "version": "0.1.0",
   "author": "Denis Savchuk <mordorreal@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.6",
+    "extract-text-webpack-plugin": "next",
     "gatsby": "next",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-nprogress": "^1.0.14",
+    "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-nprogress": "next",
     "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sass": "next",
+    "lodash": "^4.17.10",
+    "node-sass": "^4.9.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "whatwg-fetch": "^2.0.4"
   },
   "keywords": [
     "gmentor learning portal"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,0 +1,47 @@
+.testimonials-item {
+  @include mobile {
+    margin: 0 0 rem(10px);
+    width: 100%;
+  }
+
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  text-align: center;
+  width: rem(290px);
+
+  &__photo {
+    margin: 0 0 rem(24px);
+
+    img {
+      border-radius: 50%;
+      height: rem(110px);
+      width: rem(110px);
+    }
+  }
+
+  &__name {
+    color: $main-grey;
+    font-family: $title-font;
+    font-size: $font-size-24px;
+    font-weight: $font-weight-bold;
+    line-height: rem(29px);
+    margin: 0 0 rem(17px);
+  }
+
+  &__position {
+    color: $main-orange;
+    font-family: $title-font;
+    font-size: $font-size-16px;
+    line-height: rem(20px);
+    margin: 0 0 rem(27px);
+  }
+
+  &__text {
+    color: $main-grey;
+    font-family: $text-font;
+    font-size: $font-size-16px;
+    line-height: rem(24px);
+  }
+}

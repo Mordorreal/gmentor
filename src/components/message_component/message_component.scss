@@ -1,0 +1,24 @@
+.message-component {
+  --color: $main-grey;
+
+  align-items: center;
+  color: var(--color);
+  display: flex;
+  font-size: .86rem;
+  height: 1.36rem;
+  margin-top: .36rem;
+  transition: all .15s ease-in-out;
+
+  svg {
+    fill: var(--color);
+    width: 1.14rem;
+  }
+
+  &_error {
+    --color: $main-red;
+  }
+
+  &_success {
+    --color: $main-green;
+  }
+}

@@ -1,0 +1,21 @@
+.socials-component {
+  align-items: center;
+  display: flex;
+  height: rem(30px);
+  margin: auto;
+  width: rem(130px);
+
+  &__icon {
+    flex: 1 0 0%;
+
+    svg {
+      fill: $main-grey;
+    }
+
+    &:hover {
+      svg {
+        fill: $main-blue;
+      }
+    }
+  }
+}

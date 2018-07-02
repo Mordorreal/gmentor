@@ -1,0 +1,19 @@
+.testimonials-component {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__items {
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 rem(20px);
+  }
+
+  &__buttons {
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+  }
+}

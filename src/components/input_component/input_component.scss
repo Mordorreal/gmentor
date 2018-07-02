@@ -1,0 +1,82 @@
+.input-component {
+  &__wrapper {
+    align-items: center;
+    background-color: $white;
+    border: solid rem(1px) $main-grey;
+    border-radius: rem(4px);
+    display: flex;
+    height: 100%;
+    transition: all .15s ease-in-out;
+    width: 100%;
+
+    &_is-disabled {
+      background-color: lighten($main-grey, 20%);
+    }
+
+    &_is-focused {
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-blue, 10%);
+    }
+
+    &_error {
+      border: solid rem(1px) $main-red;
+    }
+
+    &_success {
+      border: solid rem(1px) $main-green;
+    }
+
+    &:hover {
+      border: solid rem(1px) lighten($main-grey, 30%);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__input {
+    background-color: $white;
+    border: 0;
+    border-radius: rem(4px);
+    color: $main-grey;
+    height: 2.57rem;
+    overflow: hidden;
+    padding: 0 .86rem;
+    width: 100%;
+
+    &::placeholder {
+      color: lighten($main-grey, 30%);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &_is-disabled {
+      background-color: lighten($main-grey, 20%);
+      color: lighten($main-grey, 10%);
+    }
+
+    &_with-left-icon {
+      border-left: 0;
+    }
+
+    &_with-right-icon {
+      border-right: 0;
+    }
+  }
+
+  &__icon {
+    height: 1rem;
+    margin: 0 0 0 .86rem;
+
+    &_right {
+      margin: 0 .86rem 0 0;
+    }
+
+    svg {
+      fill: $main-grey;
+      width: 1.14rem;
+    }
+  }
+}

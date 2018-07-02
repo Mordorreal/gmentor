@@ -1,0 +1,54 @@
+.subscribe-component {
+  align-content: center;
+  background: lighten($main-orange, 40%);
+  border-bottom: rem(1px) solid $main-blue;
+  border-top: rem(1px) solid $main-blue;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  justify-content: center;
+  padding: 3rem 1rem;
+
+  &__title {
+    color: $white;
+    font-family: $title-font;
+    font-size: $font-size-26px;
+    line-height: rem(33px);
+    margin: 0 0 rem(20px);
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  &__input {
+    @include mobile {
+      flex: 1 0 100%;
+      margin: 0;
+    }
+
+    flex: 1 0 0%;
+    max-width: rem(450px);
+  }
+
+  &__button {
+    @include mobile {
+      height: rem(36px);
+    }
+    flex: 1 0 0%;
+    height: rem(50px);
+    max-width: rem(130px);
+  }
+
+  &__message {
+    color: $main-orange;
+    font-size: $font-size-20px;
+    height: rem(25px);
+    margin: rem(15px) 0 0;
+    text-align: center;
+  }
+}

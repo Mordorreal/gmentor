@@ -1,0 +1,133 @@
+.button {
+  align-items: center;
+  background-color: $main-blue;
+  border: solid 1px transparent;
+  border-radius: .29rem;
+  color: $white;
+  display: flex;
+  font-weight: $font-weight-normal;
+  height: 3.3rem;
+  justify-content: center;
+  letter-spacing: -.01rem;
+  margin: .5rem;
+  min-width: 3.57rem;
+  padding: 0 1rem;
+  transition: all .15s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%;
+
+  svg {
+    fill: $white;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &_is-normal {
+    font-weight: $font-weight-normal;
+    height: 2.57rem;
+    min-width: 2.86rem;
+  }
+
+  &_is-small {
+    font-size: $font-size-12px;
+    font-weight: $font-weight-normal;
+    height: 1.86rem;
+    min-width: 2.14rem;
+  }
+
+  &_is-green {
+    background-color: $main-green;
+
+    &:focus {
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-green, 10%);
+    }
+
+    &:hover {
+      background-color: lighten($main-green, 3%);
+    }
+
+    &:active {
+      background-color: darken($main-green, 10%);
+    }
+  }
+
+  &_is-red {
+    background-color: $main-red;
+
+    &:focus {
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-red, 10%);
+    }
+
+    &:hover {
+      background-color: lighten($main-red, 3%);
+    }
+
+    &:active {
+      background-color: darken($main-red, 10%);
+    }
+  }
+
+  &_is-blue {
+    background-color: $main-blue;
+
+    &:focus {
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-blue, 10%);
+    }
+
+    &:hover {
+      background-color: lighten($main-blue, 3%);
+    }
+
+    &:active {
+      background-color: darken($main-blue, 10%);
+    }
+  }
+
+  &_is-orange {
+    background-color: $main-orange;
+
+    &:focus {
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-orange, 10%);
+    }
+
+    &:hover {
+      background-color: lighten($main-orange, 3%);
+    }
+
+    &:active {
+      background-color: darken($main-orange, 10%);
+    }
+  }
+
+  &_is-white {
+    background-color: $white;
+    border: solid 1px $main-grey;
+    color: $main-grey;
+
+    &:focus {
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-grey, 10%);
+    }
+
+    &:hover {
+      border: solid 1px lighten($main-grey, 3%);
+      color: lighten($main-grey, 3%);
+    }
+
+    &:active {
+      border: solid 1px darken($main-grey, 10%);
+      color: darken($main-grey, 10%);
+    }
+  }
+
+  &_is-disabled {
+    background-color: $main-grey;
+    border: solid 1px darken($main-grey, 30%);
+    color: darken($main-grey, 30%);
+    cursor: not-allowed;
+  }
+}

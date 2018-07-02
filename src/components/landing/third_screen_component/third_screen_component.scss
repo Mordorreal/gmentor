@@ -1,0 +1,58 @@
+.third-screen-component {
+  @include mobile {
+    height: max-content;
+  }
+
+  @include tablet {
+    background-position: 95% 80%, top left;
+    background-size: 25%, 100%;
+    height: max-content;
+  }
+
+  @include desktop-small {
+    background-position: 95% 80%, top left;
+    background-size: 25%, 100%;
+    height: max-content;
+  }
+
+  border-top: rem(1px) solid $main-blue;
+  height: rem(530px);
+  padding: 0 rem(15px);
+
+  &__container {
+    @include mobile {
+      margin: rem(35px) auto 0;
+    }
+
+    margin: rem(65px) auto 0;
+  }
+
+  &__title {
+    @include mobile {
+      margin: 0 0 rem(40px);
+    }
+
+    margin: 0 0 rem(70px);
+  }
+
+  &__list {
+    @include mobile {
+      margin: 0;
+      width: 95%;
+    }
+
+    @include tablet {
+      margin: 0;
+      width: 75%;
+    }
+
+    @include desktop-small {
+      margin: 0;
+      width: 75%;
+    }
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 rem(120px);
+  }
+}

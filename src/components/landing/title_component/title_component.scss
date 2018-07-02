@@ -1,0 +1,29 @@
+.title-component {
+  &__title {
+    @include mobile {
+      font-size: $font-size-26px;
+      font-weight: $font-weight-bold;
+      line-height: rem(33px);
+    }
+
+    color: $main-orange;
+    font-family: $title-font;
+    font-size: $font-size-44px;
+    line-height: rem(50px);
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include mobile {
+      font-size: $font-size-18px;
+      line-height: rem(24px);
+    }
+
+    color: $main-grey;
+    font-family: $text-font;
+    font-size: $font-size-26px;
+    line-height: rem(36px);
+    text-align: center;
+    white-space: pre-wrap;
+  }
+}

@@ -1,0 +1,23 @@
+.list-item-component {
+  align-items: center;
+  display: flex;
+  margin: 0 0 rem(23px);
+
+  &__circle {
+    background: $main-orange;
+    border-radius: 50%;
+    flex: 1 0 rem(16px);
+    height: rem(16px);
+    margin: 0 rem(20px) 0 0;
+    max-height: rem(16px);
+    max-width: rem(16px);
+  }
+
+  &__text {
+    color: $main-grey;
+    flex: 5 0 95%;
+    font-family: $text-font;
+    font-size: $font-size-20px;
+    line-height: rem(25px);
+  }
+}

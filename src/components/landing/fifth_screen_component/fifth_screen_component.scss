@@ -1,0 +1,14 @@
+.fifth-screen-component {
+  @include mobile {
+    padding: rem(30px) rem(15px) 0;
+  }
+
+  background: $white;
+  height: max-content;
+  padding: rem(66px) rem(15px) 0;
+  background: $main-yellow;
+
+  &__title {
+    margin: 0 0 rem(66px);
+  }
+}

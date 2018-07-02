@@ -1,0 +1,88 @@
+//breakpoints
+$xs: 320px;
+$xs-min: $xs;
+$xs-max: ($xs - 1);
+
+$sm: 480px;
+$sm-min: $sm;
+$sm-max: ($sm - 1);
+
+$md: 769px;
+$md-min: $md;
+$md-max: ($md - 1);
+
+$lg: 979px;
+$lg-min: $lg;
+$lg-max: ($lg - 1);
+
+$xl: 1200px;
+$xl-min: $xl;
+$xl-max: ($xl - 1);
+
+$xxl: 1400px;
+
+// main colors
+$main-grey: #141104;
+$main-blue: #005689;
+$main-orange: #e6711b;
+$main-red: #951c55;
+$main-green: #1abc9c;
+$main-yellow: #fbc32f;
+
+$black: #000;
+$white: #fff;
+
+//gradients
+$white-to-gray-gradient: linear-gradient(180deg, $white 0%, $main-yellow 100%);
+
+//font-family
+$title-font: Oswald, cursive;
+$text-font: Roboto, sans-serif;
+
+//fonts
+$rembase: 14px;
+
+@function rem($pixels){
+  $remSize: $pixels / $rembase;
+  @return #{$remSize}rem;
+}
+
+$font-size-10px: rem(10px);
+$font-size-11px: rem(11px);
+$font-size-12px: rem(12px);
+$font-size-13px: rem(13px);
+$font-size-14px: rem(14px);
+$font-size-15px: rem(15px);
+$font-size-16px: rem(16px);
+$font-size-18px: rem(18px);
+$font-size-20px: rem(20px);
+$font-size-21px: rem(21px);
+$font-size-23px: rem(23px);
+$font-size-24px: rem(24px);
+$font-size-26px: rem(26px);
+$font-size-30px: rem(30px);
+$font-size-44px: rem(44px);
+$font-size-46px: rem(46px);
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+
+//shadows
+$shadow: -1px 1px 5px 1px rgba(223, 223, 223, 1);
+$inset-shadow: inset 1px 1px 5px 1px rgba(223, 223, 223, 1);
+$inset-shadow-green: inset 1px 1px 5px 1px $main-green;
+$inset-shadow-red: inset 1px 1px 5px 1px $main-red;
+$inset-shadow-blue: inset 1px 1px 5px 1px $main-blue;
+$button-shadow: 0 2px 4px 0 rgba(0, 35, 0, .5);
+
+// navbars
+$side-nav-full-width: 12vw;
+$side-nav-reduced-width: 3.5vw;
+$navbar-brand-bg: $main-grey;
+
+// main container
+$main-container-width: 88vw;
+$main-container-width-wide: 96.5vw;
+
+// containers paddings
+$new-container-padding: 0 0 rem(20px) 0;

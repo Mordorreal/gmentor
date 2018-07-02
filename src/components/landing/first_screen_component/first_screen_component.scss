@@ -1,0 +1,137 @@
+.first-screen-component {
+  @include mobile {
+    background: $white-to-gray-gradient;
+    min-height: rem(300px);
+    height: rem(300px);
+  }
+
+  background-image: url(../../../common/images/main-background.jpg);
+  background-position: 3% 18%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-13px;
+  height: 100vh;
+  min-height: rem(600px);
+  width: 100%;
+
+  &__header {
+    @include mobile {
+      margin: rem(15px) auto 0;
+      width: 95%;
+    }
+
+    @include tablet {
+      margin: rem(20px) auto rem(20px);
+      width: 90%;
+    }
+  
+    @include desktop-small {
+      margin: rem(30px) auto rem(50px);
+      width: 90%;
+    }
+
+    margin: rem(30px) auto rem(70px);
+    width: 90%;
+  }
+
+  &__main-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include mobile {
+      margin: rem(30px) 0;
+    }
+
+    @include tablet {
+      margin: rem(10px) 0 rem(10px);
+    }
+  
+    @include desktop-small {
+      margin: rem(15px) 0 rem(30px);
+    }
+
+    margin: rem(15px) 0 rem(40px);
+    max-width: 100%;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include mobile {
+      margin: 0 0 rem(30px);
+    }
+
+    @include tablet {
+      margin: 0 0 rem(40px);
+    }
+  
+    @include desktop-small {
+      margin: 0 0 rem(60px);
+    }
+
+    margin: 0 0 rem(70px);
+    max-width: rem(610px);
+    text-align: center;
+  }
+
+  &__text {
+    @include mobile {
+      font-size: $font-size-20px;
+    }
+
+    color: $main-grey;
+    font-size: $font-size-26px;
+
+    &_title {
+      @include mobile {
+        display: inline;
+        font-size: $font-size-26px;
+        line-height: rem(40px);
+      }
+
+      font-family: $title-font;
+      font-size: $font-size-46px;
+      line-height: rem(60px);
+      text-transform: uppercase;
+    }
+
+    &_orange {
+      color: $main-orange;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    max-width: rem(610px);
+    width: 95%;
+  }
+
+  &__button {
+    @include mobile {
+      height: rem(40px);
+      width: rem(150px);
+    }
+
+    height: rem(50px);
+    text-transform: uppercase;
+    width: rem(200px);
+  }
+
+  &__mouse-image {
+    @include mobile {
+      display: none;
+    }
+    
+    display: flex;
+    height: rem(30px);
+
+    img {
+      height: rem(30px);
+      margin: rem(20px) auto 0;
+    }
+  }
+}

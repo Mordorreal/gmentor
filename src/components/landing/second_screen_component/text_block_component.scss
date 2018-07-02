@@ -1,0 +1,51 @@
+.text-block-component {
+  @include mobile {
+    height: rem(250px);
+    margin: 0;
+    width: rem(340px);
+  }
+
+  @include tablet {
+    height: rem(250px);
+    width: rem(340px);
+  }
+
+  @include desktop-small {
+    height: rem(250px);
+    width: rem(340px);
+  }
+
+  color: $main-grey;
+  display: flex;
+  height: rem(190px);
+  margin: 0 auto;
+  width: rem(450px);
+
+  &__image {
+    margin: 0 rem(34px) 0 0;
+
+    img {
+      width: rem(80px);
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $title-font;
+    font-size: $font-size-24px;
+    font-weight: $font-weight-bold;
+    line-height: rem(29px);
+    margin: 0 0 rem(20px);
+  }
+
+  &__subtitle {
+    color: $main-grey;
+    font-family: $text-font;
+    font-size: $font-size-16px;
+    line-height: rem(24px);
+  }
+}

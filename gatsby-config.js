@@ -1,3 +1,9 @@
+const { resolve } = require('path');
+
+const pathToVariables = resolve(__dirname, 'src', 'components', 'variables.scss');
+const pathToMixins = resolve(__dirname, 'src', 'components', 'mixins.scss');
+
+
 module.exports = {
   pathPrefix: `/gmentor`,
   siteMetadata: {
@@ -6,7 +12,17 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: `@import '${pathToVariables}'; @import '${pathToMixins}';`,
+        includePaths: [
+          pathToVariables,
+          pathToMixins,
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: "UA-121318462-1",
         head: true,
@@ -15,7 +31,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-nprogress',
       options: {
         showSpinner: false,
       },
