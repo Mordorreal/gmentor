@@ -14,7 +14,9 @@ const handleSubscribeClick = () => {
 const FirstScreenComponent = () => {
   return (
     <div className="first-screen-component">
-      <div className="first-screen-component__header" />
+      <div className="first-screen-component__header">
+        GM
+      </div>
       <div className="first-screen-component__main-container">
         <div className="first-screen-component__title">
           <div className="first-screen-component__text first-screen-component__text_title">
@@ -40,7 +42,7 @@ const FirstScreenComponent = () => {
             <ButtonComponent isOrange onClick={handleSubscribeClick}>Я хочу учиться!</ButtonComponent>
           </div>
         </div>
-        <div className="first-screen-component__mouse-image">
+        <div className="first-screen-component__mouse-image animated infinite bounce">
           <img src={MouseImage} alt="mouse"/>
         </div>
       </div>

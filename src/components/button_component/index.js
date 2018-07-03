@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import SpinnerComponent from '../spinner_component';
+
 import './button_component.scss';
 
 
@@ -17,6 +19,7 @@ class ButtonComponent extends Component {
     isDisabled: PropTypes.bool,
     isGreen: PropTypes.bool,
     isLarge: PropTypes.bool,
+    isLoading: PropTypes.bool,
     isOrange: PropTypes.bool,
     isRed: PropTypes.bool,
     isSmall: PropTypes.bool,
@@ -44,6 +47,7 @@ class ButtonComponent extends Component {
       isDisabled,
       isGreen,
       isLarge,
+      isLoading,
       isOrange,
       isRed,
       isSmall,
@@ -58,6 +62,7 @@ class ButtonComponent extends Component {
       'button_is-orange': !isDisabled && isOrange,
       'button_is-white': !isDisabled && isWhite,
       'button_is-disabled': isDisabled,
+      'button_is-loading': isLoading,
       'button_is-normal': !isLarge && !isSmall,
       'button_is-small': isSmall,
       [`${className}`]: className,
@@ -71,7 +76,8 @@ class ButtonComponent extends Component {
         onKeyDown={this.handleKeyDown}
         type="button"
       >
-        {children}
+        {isLoading && <SpinnerComponent isBlack={isWhite} />}
+        {!isLoading && children}
       </button>
     );
   }

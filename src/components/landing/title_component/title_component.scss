@@ -6,6 +6,13 @@
       line-height: rem(33px);
     }
 
+    @include tablet {
+      font-size: $font-size-36px;
+      font-weight: $font-weight-bold;
+      line-height: rem(33px);
+    }
+    
+
     color: $main-orange;
     font-family: $title-font;
     font-size: $font-size-44px;

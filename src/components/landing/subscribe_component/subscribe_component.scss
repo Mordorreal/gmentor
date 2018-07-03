@@ -1,34 +1,41 @@
 .subscribe-component {
-  align-content: center;
-  background: lighten($main-orange, 40%);
+  @include mobile {
+    max-height: rem(300px);
+  }
+
   border-bottom: rem(1px) solid $main-blue;
   border-top: rem(1px) solid $main-blue;
   display: flex;
-  flex-direction: column;
-  height: max-content;
-  justify-content: center;
-  padding: 3rem 1rem;
+  max-height: rem(250px);
+  overflow: hidden;
 
   &__title {
     color: $white;
     font-family: $title-font;
-    font-size: $font-size-26px;
     line-height: rem(33px);
-    margin: 0 0 rem(20px);
     text-align: center;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    z-index: 2;
+    margin: 1rem 0;
   }
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: baseline;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    margin: rem(120px) 0;
+    z-index: 2;
   }
 
   &__input {
     @include mobile {
       flex: 1 0 100%;
-      margin: 0;
+      margin: 0 0 rem(10px) 0;
     }
 
     flex: 1 0 0%;
@@ -45,10 +52,16 @@
   }
 
   &__message {
+    @include mobile {
+      margin: rem(250px) 0;
+    }
     color: $main-orange;
     font-size: $font-size-20px;
     height: rem(25px);
-    margin: rem(15px) 0 0;
     text-align: center;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    margin: rem(190px) 0;
   }
 }

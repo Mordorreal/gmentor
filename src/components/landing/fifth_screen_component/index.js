@@ -4,7 +4,7 @@ import TitleComponent from '../title_component';
 import TestimonialsComponent from './testimonials_component';
 
 import NikitaImg from '../../../common/images/1.jpg';
-import MariyaImg from '../../../common/images/5.jpg';
+import SergeyImg from '../../../common/images/5.jpg';
 import IgnatImg from '../../../common/images/6.jpg';
 
 import './fifth_screen_component.scss';
@@ -19,10 +19,10 @@ const FifthScreenComponent = () => {
       text: 'Спасибо GMentor за столь замечательно выстроенный учебный план и за вашу помощь в достижении моих целей!'
     },
     {
-      photoUrl: MariyaImg,
-      name: 'Мария Мамонтова',
+      photoUrl: SergeyImg,
+      name: 'Сергей Березин',
       position: 'Full-stack web developer at spacebox.ru',
-      text: 'Я очень благодарна вашей команде за помощь в устранении пробелов в моих знаниях. Вы мне очень помогли.'
+      text: 'Я очень благодарен вашей команде за помощь в устранении пробелов в моих знаниях. Вы мне очень помогли.'
     },
     {
       photoUrl: IgnatImg,

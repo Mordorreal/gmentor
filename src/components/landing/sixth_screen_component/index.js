@@ -1,7 +1,9 @@
 import React from 'react';
 
-import TitleComponent from '../title_component';
 import ButtonComponent from '../../button_component';
+import DoodleComponent from '../../doodle_component';
+
+import TitleComponent from '../title_component';
 
 import './sixth_screen_component.scss';
 
@@ -15,6 +17,7 @@ const handleSubscribeClick = () => {
 const SixthScreenComponent = () => {
   return (
     <div className="sixth-screen-component">
+      <DoodleComponent type="lines" />
       <div className="sixth-screen-component__title">
         <TitleComponent
           title="Купи билет в будущее"

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import isEmpty from 'lodash/isEmpty';
 
-import { subscribeByEmail } from '../../../api/subscription';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 import { validateEmail } from '../../../common/utils';
-import TitleComponent from '../title_component';
 
 import InputComponent from '../../input_component';
 import ButtonComponent from '../../button_component';
+import DoodleComponent from '../../doodle_component';
+
+import TitleComponent from '../title_component';
 
 import './subscribe_component.scss';
 
@@ -17,7 +19,8 @@ export default class SubscribeComponent extends Component {
 
     this.state = {
       showSuccessMessage: false,
-      errors: {}
+      errors: {},
+      loading: false,
     };
   }
 
@@ -36,17 +39,18 @@ export default class SubscribeComponent extends Component {
       this.setErrors(errors);
       return;
     }
+    this.setState({ loading: true });
 
-    const res = await subscribeByEmail(email);
-    if (res.type && res.type === 'error') {
-      this.setErrors({ email: [res.message && (res.message.text || res.message)] });
+    const res = await addToMailchimp(email, {});
+    if (res.result && res.result === 'error') {
+      this.setErrors({ email: res.msg, loading: false });
     } else {
-      this.setState({ showSuccessMessage: true });
+      this.setState({ showSuccessMessage: true, loading: false });
     }
   }
 
   render() {
-    const { errors, showSuccessMessage } = this.state;
+    const { errors, showSuccessMessage, loading } = this.state;
     const inputRef = (input) => this.input = input;
     const errorMessage = {
       text: errors.email,
@@ -55,6 +59,7 @@ export default class SubscribeComponent extends Component {
 
     return (
       <div className="subscribe-component">
+        <DoodleComponent type="background" />
         <div className="subscribe-component__title">
           <TitleComponent title="Запишитесь как можно быстрее на предварительное интервью" />
         </div>
@@ -68,7 +73,12 @@ export default class SubscribeComponent extends Component {
             />
           </div>
           <div className="subscribe-component__button">
-            <ButtonComponent isGreen onClick={this.handleSubscribe}>{"Я хочу учиться!"}</ButtonComponent>
+            <ButtonComponent
+              isLoading={loading}
+              isGreen
+              onClick={this.handleSubscribe}
+            >{"Я хочу учиться!"}
+            </ButtonComponent>
           </div>
         </div>
         <div className="subscribe-component__message">

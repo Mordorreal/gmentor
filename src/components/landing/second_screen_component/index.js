@@ -6,7 +6,6 @@ import RoadImage from '../../../common/images/road_with_broken_line.svg';
 import TimeImage from '../../../common/images/clock.svg';
 
 import TitleComponent from '../title_component';
-import DoodleComponent from '../../doodle_component';
 
 import TextBlockComponent from './text_block_component';
 
@@ -16,7 +15,6 @@ import './second_screen_component.scss';
 const SecondScreenComponent = () => {
   return (
     <div className="second-screen-component">
-      <DoodleComponent />
       <div className="second-screen-component__title">
         <TitleComponent
           title="Только лучшее для вас"

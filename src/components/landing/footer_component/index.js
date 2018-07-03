@@ -8,9 +8,6 @@ import './footer_component.scss';
 const MOBILE_RESOLUTION = 320;
 
 const FooterComponent = () => {
-  const width = window.innerWidth;
-  const more320px = width > MOBILE_RESOLUTION;
-
   const copyright = (
     <div className="footer-component__copyright">
       <CopyrightComponent />
@@ -38,26 +35,16 @@ const FooterComponent = () => {
 
   return (
     <div>
-      {more320px &&
-        <div className="footer-component">
-          <div className="footer-component__row">
-            {copyright}
-            {services}
-          </div>
-          <div className="footer-component__row footer-component__row_is-centered">
-            {socials}
-            {links}
-          </div>
-        </div>
-      }
-      {!more320px &&
-        <div className="footer-component">
+      <div className="footer-component">
+        <div className="footer-component__row">
           {copyright}
-          {socials}
           {services}
+        </div>
+        <div className="footer-component__row footer-component__row_is-centered">
+          {socials}
           {links}
         </div>
-      }
+      </div>
     </div>
   );
 };

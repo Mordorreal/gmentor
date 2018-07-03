@@ -1,4 +1,4 @@
-const isValidEmail = (email) => /^[^@\s]+@[^@\s]+$/i.exec(email);
+const isValidEmail = (email) => /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,32}/i.exec(email);
 
 const validateEmail = ({ email }) => {
   const notValidEmail = "Пожалуйста, введите валидный email.";
@@ -7,11 +7,11 @@ const validateEmail = ({ email }) => {
   const errors = {};
 
   if (!isValidEmail(email)) {
-    errors.email = [notValidEmail];
+    errors.email = notValidEmail;
   }
 
   if (email === '') {
-    errors.email = [emailEmpty];
+    errors.email = emailEmpty;
   }
 
   return errors;

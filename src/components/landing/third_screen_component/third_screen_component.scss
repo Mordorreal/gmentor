@@ -15,9 +15,9 @@
     height: max-content;
   }
 
-  border-top: rem(1px) solid $main-blue;
   height: rem(530px);
   padding: 0 rem(15px);
+  overflow: hidden;
 
   &__container {
     @include mobile {

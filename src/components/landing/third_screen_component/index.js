@@ -1,5 +1,7 @@
 import React from 'react';
 
+import DoodleComponent from '../../doodle_component';
+
 import TitleComponent from '../title_component';
 import ListItemComponent from './list_item_component';
 
@@ -16,6 +18,7 @@ const ThirdScreenComponent = () => {
             subtitle="Ваша судьба только в ваших руках. Не тратьте время понапрасну!"
           />
         </div>
+        <DoodleComponent type="round" />
         <div className="third-screen-component__list">
           <ListItemComponent text="Индивидульный план развития" />
           <ListItemComponent text="Персональный подход при вашем обучении" />

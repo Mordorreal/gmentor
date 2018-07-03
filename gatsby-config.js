@@ -36,5 +36,11 @@ module.exports = {
         showSpinner: false,
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://online.us18.list-manage.com/subscribe/post?u=9f9933f5594816a2e4d77cc03&amp;id=3d7f3803ad',
+      },
+    },
   ],
 }

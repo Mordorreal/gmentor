@@ -4,16 +4,18 @@
   }
 
   align-items: center;
-  background: $white;
   display: flex;
   flex-direction: column;
-  height: rem(318px);
+  height: rem(300px);
+  overflow: hidden;
 
   &__title {
-    margin: rem(67px) 0 rem(40px);
+    margin: rem(67px) 0 0 0;
+    position: absolute;
   }
 
   &__button {
-    margin: 0 auto;
+    margin: rem(180px) 0 0 0;
+    position: absolute;
   }
 }
