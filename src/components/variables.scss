@@ -22,19 +22,28 @@ $xl-max: ($xl - 1);
 $xxl: 1400px;
 
 // main colors
-$main-grey: #141104;
-$main-blue: #005689;
-$main-orange: #e6711b;
+$main-primary: #254483;
+$main-secondary: #4ebde7;
+
 $main-red: #951c55;
+$main-blue: #005689;
 $main-green: #1abc9c;
 $main-yellow: #fbc32f;
 
 $black: #000;
-$white: #fff;
+$white: #d8f7ff;
 
 //gradients
-$white-to-yellow-gradient: linear-gradient(180deg, $white 0%, $main-yellow 100%);
-$yellow-to-white-gradient: linear-gradient(180deg, $main-yellow 0%, $white 100%);
+$secondary-to-primary-gradient: linear-gradient(
+  180deg,
+  $white 0%,
+  $main-primary 100%
+);
+$primary-to-secondary-gradient: linear-gradient(
+  180deg,
+  $main-primary 0%,
+  $white 100%
+);
 
 //font-family
 $title-font: Oswald, cursive;
@@ -43,7 +52,7 @@ $text-font: Roboto, sans-serif;
 //fonts
 $rembase: 14px;
 
-@function rem($pixels){
+@function rem($pixels) {
   $remSize: $pixels / $rembase;
   @return #{$remSize}rem;
 }
@@ -75,12 +84,12 @@ $inset-shadow: inset 1px 1px 5px 1px rgba(223, 223, 223, 1);
 $inset-shadow-green: inset 1px 1px 5px 1px $main-green;
 $inset-shadow-red: inset 1px 1px 5px 1px $main-red;
 $inset-shadow-blue: inset 1px 1px 5px 1px $main-blue;
-$button-shadow: 0 2px 4px 0 rgba(0, 35, 0, .5);
+$button-shadow: 0 2px 4px 0 rgba(0, 35, 0, 0.5);
 
 // navbars
 $side-nav-full-width: 12vw;
 $side-nav-reduced-width: 3.5vw;
-$navbar-brand-bg: $main-grey;
+$navbar-brand-bg: $main-secondary;
 
 // main container
 $main-container-width: 88vw;

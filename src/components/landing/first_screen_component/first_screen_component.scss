@@ -1,12 +1,12 @@
 .first-screen-component {
   @include mobile {
-    background: $white-to-yellow-gradient;
+    background: $primary-to-secondary-gradient;
     min-height: 29rem;
     height: 29rem;
   }
 
   background-image: url(../../../common/images/main-background.jpg);
-  background-position: 3% 18%;
+  background-position: 3% 35%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,14 @@
   height: 100vh;
   min-height: rem(600px);
   width: 100%;
+
+  &__logo {
+    width: rem(100px);
+
+    @include mobile {
+      width: rem(50px);
+    }
+  }
 
   &__header {
     @include mobile {
@@ -25,17 +33,14 @@
       margin: rem(20px) auto rem(20px);
       width: 90%;
     }
-  
+
     @include desktop-small {
-      margin: rem(30px) auto rem(50px);
+      margin: rem(30px) auto rem(40px);
       width: 90%;
     }
 
-    margin: rem(30px) auto rem(70px);
+    margin: rem(30px) auto rem(40px);
     width: 90%;
-    font-size: $font-size-46px;
-    font-weight: $font-weight-bold;
-    color: #e6711b;
   }
 
   &__main-container {
@@ -52,7 +57,7 @@
     @include tablet {
       margin: rem(10px) 0 rem(10px);
     }
-  
+
     @include desktop-small {
       margin: rem(15px) 0 rem(30px);
     }
@@ -70,7 +75,7 @@
     @include tablet {
       margin: 0 0 rem(40px);
     }
-  
+
     @include desktop-small {
       margin: 0 0 rem(60px);
     }
@@ -85,7 +90,7 @@
       font-size: $font-size-20px;
     }
 
-    color: $main-grey;
+    color: $main-secondary;
     font-size: $font-size-26px;
 
     &_title {
@@ -102,7 +107,7 @@
     }
 
     &_orange {
-      color: $main-orange;
+      color: $main-primary;
     }
   }
 
@@ -128,7 +133,7 @@
     @include mobile {
       display: none;
     }
-    
+
     display: flex;
     height: rem(30px);
     margin: 1rem 0 0 0;

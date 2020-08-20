@@ -8,7 +8,6 @@ import CrossInCircleIcon from '../../common/icons/cross_in_circle';
 
 import './message_component.scss';
 
-
 const MessageComponent = ({ message }) => {
   const messageClasses = classnames({
     'message-component': true,
@@ -33,7 +32,14 @@ const MessageComponent = ({ message }) => {
   }
 
   return (
-    <div className={messageClasses}>{icon()}&nbsp;&nbsp;{message.text}</div>
+    <div className={messageClasses}>
+      {icon()}&nbsp;&nbsp;
+      <p
+        dangerouslySetInnerHTML={{
+          __html: message.text,
+        }}
+      />
+    </div>
   );
 };
 

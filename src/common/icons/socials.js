@@ -1,8 +1,12 @@
 import React from 'react';
 
-export const LinkedInIcon = (props) => {
+export const LinkedInIcon = props => {
   return (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.117 430.117">
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 430.117 430.117"
+    >
       <path
         d="M430.117 261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707-25.473 0-40.632 17.142-47.301
           33.724-2.432 5.928-3.058 14.179-3.058 22.477V420.56h-92.219s1.242-251.285
@@ -15,9 +19,13 @@ export const LinkedInIcon = (props) => {
   );
 };
 
-export const FacebookIcon = (props) => {
+export const FacebookIcon = props => {
   return (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.124 96.123">
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 96.124 96.123"
+    >
       <path
         d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037c-1.083 0-1.96.878-1.96 1.961v15.803c0
           1.083.878 1.96 1.96 1.96H36.57v39.876c0 1.083.877 1.96 1.96 1.96h16.352c1.083 0 1.96-.878
@@ -29,7 +37,7 @@ export const FacebookIcon = (props) => {
   );
 };
 
-export const TwitterIcon = (props) => {
+export const TwitterIcon = props => {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
       <path
@@ -45,4 +53,3 @@ export const TwitterIcon = (props) => {
     </svg>
   );
 };
-

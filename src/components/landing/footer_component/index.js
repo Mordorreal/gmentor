@@ -1,13 +1,13 @@
 import React from 'react';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import CopyrightComponent from '../../copyright_component';
 import SocialsComponent from '../../socials_component';
 
 import './footer_component.scss';
 
-const MOBILE_RESOLUTION = 320;
-
 const FooterComponent = () => {
+  const intl = useIntl();
   const copyright = (
     <div className="footer-component__copyright">
       <CopyrightComponent />
@@ -16,7 +16,7 @@ const FooterComponent = () => {
 
   const services = (
     <div className="footer-component__text">
-      Сервисы
+      {intl.formatMessage({ id: 'services' })}
     </div>
   );
 
@@ -25,13 +25,14 @@ const FooterComponent = () => {
       <SocialsComponent />
     </div>
   );
-  /* eslint-disable no-undef */
+
   const links = (
     <div className="footer-component__links">
-      <a href="https://blog.gmentor.online/">Блог</a>
+      <a href="https://blog.gmentor.online/">
+        {intl.formatMessage({ id: 'blog' })}
+      </a>
     </div>
   );
-  /* eslint-enable no-undef */
 
   return (
     <div>

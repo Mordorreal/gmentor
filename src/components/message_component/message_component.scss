@@ -1,13 +1,13 @@
 .message-component {
-  --color: $main-grey;
+  --color: $main-secondary;
 
   align-items: center;
   color: var(--color);
   display: flex;
-  font-size: .86rem;
+  font-size: 0.86rem;
   height: 1.36rem;
-  margin-top: .36rem;
-  transition: all .15s ease-in-out;
+  margin-top: 0.36rem;
+  transition: all 0.15s ease-in-out;
 
   svg {
     fill: var(--color);
@@ -19,6 +19,6 @@
   }
 
   &_success {
-    --color: $main-green;
+    --color: $main-primary;
   }
 }

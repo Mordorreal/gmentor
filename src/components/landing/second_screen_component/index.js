@@ -1,4 +1,5 @@
 import React from 'react';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import InformationImage from '../../../common/images/information.svg';
 import MoneyBagImage from '../../../common/images/money_bag_with_dollar_symbol.svg';
@@ -11,39 +12,59 @@ import TextBlockComponent from './text_block_component';
 
 import './second_screen_component.scss';
 
-
 const SecondScreenComponent = () => {
+  const intl = useIntl();
   return (
     <div className="second-screen-component">
       <div className="second-screen-component__title">
         <TitleComponent
-          title="Только лучшее для вас"
-          subtitle="Полностью индивидуальный подход"
+          title={intl.formatMessage({ id: 'only_for_you' })}
+          subtitle={intl.formatMessage({ id: 'individual' })}
         />
       </div>
       <div className="second-screen-component__text">
-        {"Наши менторы составят для вас план обучения в соответствии с вашими знаниями и предпочтениями. Больше не нужно слушать то, что вы уже слышали по 10 раз. Мы даем только то, что вам действительно нужно."}
+        {intl.formatMessage({ id: 'individual_plan_for_you' })}
       </div>
       <div className="second-screen-component__container">
         <TextBlockComponent
-          img={<img src={RoadImage} alt="Максимально короткий путь к цели" />}
-          title="Максимально короткий путь к цели"
-          subtitle="Вы будете учить только то, что нужно для достижения вашей цели. Фокус и качество подачи материала наш главный плюс."
+          img={
+            <img
+              src={RoadImage}
+              alt={intl.formatMessage({ id: 'short_path' })}
+            />
+          }
+          title={intl.formatMessage({ id: 'short_path' })}
+          subtitle={intl.formatMessage({ id: 'learn_what_you_need' })}
         />
         <TextBlockComponent
-          img={<img src={MoneyBagImage} alt="Только действительно нужные траты"/>}
-          title="Только действительно нужные траты"
-          subtitle="Индивидульная программа и ваш план обучения позволяют не растрачивать ваш бюджет на не нужную вам информацию."
+          img={
+            <img
+              src={MoneyBagImage}
+              alt={intl.formatMessage({ id: 'needed_costs' })}
+            />
+          }
+          title={intl.formatMessage({ id: 'needed_costs' })}
+          subtitle={intl.formatMessage({ id: 'individual_plan' })}
         />
         <TextBlockComponent
-          img={<img src={TimeImage} alt="Время ваш главный актив" />}
-          title="Время ваш главный актив"
-          subtitle="Сфокусированная программа позволит вам достигнуть ваши цели максимально быстро и в удобное вам время."
+          img={
+            <img
+              src={TimeImage}
+              alt={intl.formatMessage({ id: 'time_active' })}
+            />
+          }
+          title={intl.formatMessage({ id: 'time_active' })}
+          subtitle={intl.formatMessage({ id: 'focus_program' })}
         />
         <TextBlockComponent
-          img={<img src={InformationImage} alt="Максимально доступная информация" />}
-          title="Максимально доступная информация"
-          subtitle="Наши менторы постараются объяснить даже самые сложные вещи понятным для вас языком."
+          img={
+            <img
+              src={InformationImage}
+              alt={intl.formatMessage({ id: 'information' })}
+            />
+          }
+          title={intl.formatMessage({ id: 'information' })}
+          subtitle={intl.formatMessage({ id: 'our_mentors' })}
         />
       </div>
     </div>

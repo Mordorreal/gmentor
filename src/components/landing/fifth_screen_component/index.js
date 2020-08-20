@@ -1,4 +1,5 @@
 import React from 'react';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import TitleComponent from '../title_component';
 import TestimonialsComponent from './testimonials_component';
@@ -9,35 +10,36 @@ import IgnatImg from '../../../common/images/6.jpg';
 
 import './fifth_screen_component.scss';
 
-
 const FifthScreenComponent = () => {
+  const intl = useIntl();
+
   const testimonials = [
     {
       photoUrl: NikitaImg,
-      name: 'Никита Логинов',
+      name: intl.formatMessage({ id: 'nikita_loginov' }),
       position: 'Junior Developer at itsoft.ru',
-      text: 'Спасибо GMentor за столь замечательно выстроенный учебный план и за вашу помощь в достижении моих целей!'
+      text: intl.formatMessage({ id: 'nikita_loginov_feedback' }),
     },
     {
       photoUrl: SergeyImg,
-      name: 'Сергей Березин',
+      name: intl.formatMessage({ id: 'sergey_berezin' }),
       position: 'Full-stack web developer at spacebox.ru',
-      text: 'Я очень благодарен вашей команде за помощь в устранении пробелов в моих знаниях. Вы мне очень помогли.'
+      text: intl.formatMessage({ id: 'sergey_berezin_feedback' }),
     },
     {
       photoUrl: IgnatImg,
-      name: 'Игнат Гаскаров',
+      name: intl.formatMessage({ id: 'ignat_gaskarov' }),
       position: 'Founder at Panda Money',
-      text: `Вы помогли мне понять как можно достичь мою цель - открыть свой собственный бизнес.`
-    }
+      text: intl.formatMessage({ id: 'ignat_gaskarov_feedback' }),
+    },
   ];
 
   return (
     <div className="fifth-screen-component">
       <div className="fifth-screen-component__title">
         <TitleComponent
-          title="Что говорят о нас люди"
-          subtitle="Отзывы людей уже закончивших у нас обучение"
+          title={intl.formatMessage({ id: 'what_people_says' })}
+          subtitle={intl.formatMessage({ id: 'people_feedback' })}
         />
       </div>
       <div className="fifth-screen-component__testimonials">

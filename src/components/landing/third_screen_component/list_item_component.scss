@@ -4,7 +4,7 @@
   margin: 0 0 rem(23px);
 
   &__circle {
-    background: $main-orange;
+    background: $main-primary;
     border-radius: 50%;
     flex: 1 0 rem(16px);
     height: rem(16px);
@@ -14,7 +14,7 @@
   }
 
   &__text {
-    color: $main-grey;
+    color: $main-primary;
     flex: 5 0 95%;
     font-family: $text-font;
     font-size: $font-size-20px;

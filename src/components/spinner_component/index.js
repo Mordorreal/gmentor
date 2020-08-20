@@ -8,7 +8,11 @@ import './spinner_component.scss';
 const SpinnerComponent = ({ isBlack }) => {
   return (
     <div className="spinner-component">
-      { isBlack ? <img src={RoundSpinnerImageBlack} /> : <img src={RoundSpinnerImageWhite} /> }
+      {isBlack ? (
+        <img src={RoundSpinnerImageBlack} alt="round_spinner" />
+      ) : (
+        <img src={RoundSpinnerImageWhite} alt="round_spinner" />
+      )}
     </div>
   );
 };

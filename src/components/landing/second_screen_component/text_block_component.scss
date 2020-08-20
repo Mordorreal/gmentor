@@ -15,7 +15,7 @@
     width: rem(340px);
   }
 
-  color: $main-grey;
+  color: $main-secondary;
   display: flex;
   height: rem(190px);
   margin: 0 auto;
@@ -40,10 +40,11 @@
     font-weight: $font-weight-bold;
     line-height: rem(29px);
     margin: 0 0 rem(20px);
+    color: $main-primary;
   }
 
   &__subtitle {
-    color: $main-grey;
+    color: $main-secondary;
     font-family: $text-font;
     font-size: $font-size-16px;
     line-height: rem(24px);

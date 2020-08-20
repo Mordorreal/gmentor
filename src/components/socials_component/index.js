@@ -1,9 +1,12 @@
 import React from 'react';
 
-import { LinkedInIcon, FacebookIcon, TwitterIcon } from '../../common/icons/socials';
+import {
+  LinkedInIcon,
+  FacebookIcon,
+  TwitterIcon,
+} from '../../common/icons/socials';
 
 import './socials_component.scss';
-
 
 const SocialsComponent = () => {
   return (

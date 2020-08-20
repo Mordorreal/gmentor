@@ -8,7 +8,6 @@ import MessageComponent from '../message_component';
 
 import './input_component.scss';
 
-
 export default class InputComponent extends Component {
   static propTypes = {
     defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -32,7 +31,7 @@ export default class InputComponent extends Component {
     inputRef: (fn) => fn,
     message: {},
     onIconClick: (fn) => fn,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -72,7 +71,7 @@ export default class InputComponent extends Component {
       onSend(this.input.value);
       this.removeFocus();
     }
-  }
+  };
 
   handleBlur = () => {
     const { onBlur } = this.props;
@@ -82,14 +81,14 @@ export default class InputComponent extends Component {
     if (onBlur !== void 0) {
       onBlur(this.input.value);
     }
-  }
+  };
 
   handleInputFocus = () => this.setState({ focused: true });
   removeFocus = () => this.setState({ focused: false });
 
   handleInputChange = () => {
     this.props.isMandatory ? this.showMandatory() : this.clearMessage();
-  }
+  };
 
   render() {
     const {
@@ -132,9 +131,17 @@ export default class InputComponent extends Component {
       <div className="input-component">
         <LabelComponent text={label}>
           <div className={wrapperClasses}>
-            {icon && !isHaveRightIcon && <span className="input-component__icon" onClick={onIconClick}>
-              {icon()}
-            </span>}
+            {icon && !isHaveRightIcon && (
+              <span
+                className="input-component__icon"
+                onClick={onIconClick}
+                onKeyDown={onIconClick}
+                role="button"
+                tabIndex="0"
+              >
+                {icon()}
+              </span>
+            )}
             <input
               {...inputProps}
               className={inputClasses}
@@ -145,9 +152,17 @@ export default class InputComponent extends Component {
               onChange={this.handleInputChange}
               ref={saveRef}
             />
-            {icon && isHaveRightIcon && <span className="input-component__icon input-component__icon_right" onClick={onIconClick}>
-              {icon()}
-            </span>}
+            {icon && isHaveRightIcon && (
+              <span
+                className="input-component__icon input-component__icon_right"
+                onClick={onIconClick}
+                onKeyDown={onIconClick}
+                role="button"
+                tabIndex="0"
+              >
+                {icon()}
+              </span>
+            )}
           </div>
         </LabelComponent>
         {!isEmpty(message) && <MessageComponent message={message} />}

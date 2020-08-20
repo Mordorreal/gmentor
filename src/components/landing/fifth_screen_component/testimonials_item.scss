@@ -22,7 +22,7 @@
   }
 
   &__name {
-    color: $main-grey;
+    color: $main-secondary;
     font-family: $title-font;
     font-size: $font-size-24px;
     font-weight: $font-weight-bold;
@@ -31,7 +31,7 @@
   }
 
   &__position {
-    color: $main-orange;
+    color: $main-primary;
     font-family: $title-font;
     font-size: $font-size-16px;
     line-height: rem(20px);
@@ -39,7 +39,7 @@
   }
 
   &__text {
-    color: $main-grey;
+    color: $main-secondary;
     font-family: $text-font;
     font-size: $font-size-16px;
     line-height: rem(24px);

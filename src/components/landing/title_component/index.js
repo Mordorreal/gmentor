@@ -11,19 +11,15 @@ const TitleComponent = ({ title, subtitle }) => {
 
   return (
     <div className="title-component">
-      <div className="title-component__title">
-        {title}
-      </div>
-      <div className={subtitleClasses}>
-        {subtitle}
-      </div>
+      <div className="title-component__title">{title}</div>
+      <div className={subtitleClasses}>{subtitle}</div>
     </div>
   );
 };
 
 TitleComponent.propTypes = {
   subtitle: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default TitleComponent;

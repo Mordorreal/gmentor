@@ -2,17 +2,17 @@
   align-items: center;
   background-color: $main-blue;
   border: solid 1px transparent;
-  border-radius: .29rem;
+  border-radius: 0.29rem;
   color: $white;
   display: flex;
   font-weight: $font-weight-normal;
   height: 3.3rem;
   justify-content: center;
-  letter-spacing: -.01rem;
-  margin: 0 .5rem;
+  letter-spacing: -0.01rem;
+  margin: 0 0.5rem;
   min-width: 3.57rem;
   padding: 0 1rem;
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
   user-select: none;
   white-space: nowrap;
   width: 100%;
@@ -88,46 +88,46 @@
     }
   }
 
-  &_is-orange {
-    background-color: $main-orange;
+  &_is-primary {
+    background-color: $main-primary;
 
     &:focus {
-      box-shadow: 0 0 rem(1px) rem(5px) darken($main-orange, 10%);
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-primary, 10%);
     }
 
     &:hover {
-      background-color: lighten($main-orange, 3%);
+      background-color: lighten($main-primary, 3%);
     }
 
     &:active {
-      background-color: darken($main-orange, 10%);
+      background-color: darken($main-primary, 10%);
     }
   }
 
   &_is-white {
     background-color: $white;
-    border: solid 1px $main-grey;
-    color: $main-grey;
+    border: solid 1px $main-secondary;
+    color: $main-secondary;
 
     &:focus {
-      box-shadow: 0 0 rem(1px) rem(5px) darken($main-grey, 10%);
+      box-shadow: 0 0 rem(1px) rem(5px) darken($main-secondary, 10%);
     }
 
     &:hover {
-      border: solid 1px lighten($main-grey, 3%);
-      color: lighten($main-grey, 3%);
+      border: solid 1px lighten($main-secondary, 3%);
+      color: lighten($main-secondary, 3%);
     }
 
     &:active {
-      border: solid 1px darken($main-grey, 10%);
-      color: darken($main-grey, 10%);
+      border: solid 1px darken($main-secondary, 10%);
+      color: darken($main-secondary, 10%);
     }
   }
 
   &_is-disabled {
-    background-color: $main-grey;
-    border: solid 1px darken($main-grey, 30%);
-    color: darken($main-grey, 30%);
+    background-color: $main-secondary;
+    border: solid 1px darken($main-secondary, 30%);
+    color: darken($main-secondary, 30%);
     cursor: not-allowed;
   }
 

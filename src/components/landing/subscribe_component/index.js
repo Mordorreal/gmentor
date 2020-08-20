@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import isEmpty from 'lodash/isEmpty';
+import { injectIntl } from 'gatsby-plugin-intl';
 
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import { validateEmail } from '../../../common/utils';
@@ -12,8 +13,7 @@ import TitleComponent from '../title_component';
 
 import './subscribe_component.scss';
 
-
-export default class SubscribeComponent extends Component {
+class SubscribeComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -30,8 +30,9 @@ export default class SubscribeComponent extends Component {
   input = {};
 
   handleSubscribe = async () => {
+    const { intl } = this.props;
     const email = this.input.value;
-    const errors = validateEmail({ email });
+    const errors = validateEmail({ email, intl });
 
     this.clearErrors();
 
@@ -47,11 +48,12 @@ export default class SubscribeComponent extends Component {
     } else {
       this.setState({ showSuccessMessage: true, loading: false });
     }
-  }
+  };
 
   render() {
+    const { intl } = this.props;
     const { errors, showSuccessMessage, loading } = this.state;
-    const inputRef = (input) => this.input = input;
+    const inputRef = (input) => (this.input = input);
     const errorMessage = {
       text: errors.email,
       type: 'error',
@@ -61,13 +63,13 @@ export default class SubscribeComponent extends Component {
       <div className="subscribe-component">
         <DoodleComponent type="background" />
         <div className="subscribe-component__title">
-          <TitleComponent title="Запишитесь как можно быстрее на предварительное интервью" />
+          <TitleComponent title={intl.formatMessage({ id: 'subscribe' })} />
         </div>
         <div className="subscribe-component__wrapper">
           <div className="subscribe-component__input">
             <InputComponent
               message={errors.email && errorMessage}
-              placeholder="email адрес"
+              placeholder={intl.formatMessage({ id: 'email' })}
               inputRef={inputRef}
               onSend={this.handleSubscribe}
             />
@@ -77,14 +79,17 @@ export default class SubscribeComponent extends Component {
               isLoading={loading}
               isGreen
               onClick={this.handleSubscribe}
-            >{"Я хочу учиться!"}
+            >
+              {intl.formatMessage({ id: 'i_want_to' })}
             </ButtonComponent>
           </div>
         </div>
         <div className="subscribe-component__message">
-          {showSuccessMessage && "Спасибо! Мы свяжемся с вами как можно быстрее" }
+          {showSuccessMessage && intl.formatMessage({ id: 'we_will_contact' })}
         </div>
       </div>
     );
   }
 }
+
+export default injectIntl(SubscribeComponent);

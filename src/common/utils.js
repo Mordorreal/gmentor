@@ -1,8 +1,9 @@
-const isValidEmail = (email) => /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,32}/i.exec(email);
+const isValidEmail = (email) =>
+  /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,32}/i.exec(email);
 
-const validateEmail = ({ email }) => {
-  const notValidEmail = "Пожалуйста, введите валидный email.";
-  const emailEmpty = "Пожалуйста, введите email.";
+const validateEmail = ({ email, intl }) => {
+  const notValidEmail = intl.formatMessage({ id: 'please_email_valid' });
+  const emailEmpty = intl.formatMessage({ id: 'please_email' });
 
   const errors = {};
 

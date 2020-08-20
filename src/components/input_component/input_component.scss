@@ -2,15 +2,15 @@
   &__wrapper {
     align-items: center;
     background-color: $white;
-    border: solid rem(1px) $main-grey;
+    border: solid rem(1px) $main-secondary;
     border-radius: rem(4px);
     display: flex;
     height: 100%;
-    transition: all .15s ease-in-out;
+    transition: all 0.15s ease-in-out;
     width: 100%;
 
     &_is-disabled {
-      background-color: lighten($main-grey, 20%);
+      background-color: lighten($main-secondary, 20%);
     }
 
     &_is-focused {
@@ -22,11 +22,11 @@
     }
 
     &_success {
-      border: solid rem(1px) $main-green;
+      border: solid rem(1px) $main-primary;
     }
 
     &:hover {
-      border: solid rem(1px) lighten($main-grey, 30%);
+      border: solid rem(1px) lighten($main-secondary, 30%);
     }
 
     &:focus {
@@ -38,14 +38,14 @@
     background-color: $white;
     border: 0;
     border-radius: rem(4px);
-    color: $main-grey;
+    color: $main-secondary;
     height: 2.57rem;
     overflow: hidden;
-    padding: 0 .86rem;
+    padding: 0 0.86rem;
     width: 100%;
 
     &::placeholder {
-      color: lighten($main-grey, 30%);
+      color: lighten($main-primary, 30%);
     }
 
     &:focus {
@@ -53,8 +53,8 @@
     }
 
     &_is-disabled {
-      background-color: lighten($main-grey, 20%);
-      color: lighten($main-grey, 10%);
+      background-color: lighten($main-secondary, 20%);
+      color: lighten($main-secondary, 10%);
     }
 
     &_with-left-icon {
@@ -68,14 +68,14 @@
 
   &__icon {
     height: 1rem;
-    margin: 0 0 0 .86rem;
+    margin: 0 0 0 0.86rem;
 
     &_right {
-      margin: 0 .86rem 0 0;
+      margin: 0 0.86rem 0 0;
     }
 
     svg {
-      fill: $main-grey;
+      fill: $main-secondary;
       width: 1.14rem;
     }
   }

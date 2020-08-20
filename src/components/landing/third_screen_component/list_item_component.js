@@ -13,7 +13,7 @@ const ListItemComponent = ({ text }) => {
 };
 
 ListItemComponent.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string,
 };
 
 export default ListItemComponent;
