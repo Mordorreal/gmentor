@@ -1,13 +1,20 @@
 .first-screen-component {
-  @include mobile {
-    background: $primary-to-secondary-gradient;
-    min-height: 29rem;
-    height: 29rem;
+  &__bg-image {
+    @include mobile {
+      background: $primary-to-secondary-gradient;
+      min-height: 29rem;
+      height: 29rem;
+    }
+
+    background-image: url(../../../common/images/main-background.jpg);
+    filter: blur(8px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
   }
 
-  background-image: url(../../../common/images/main-background.jpg);
-  background-position: 3% 20%;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   font-size: $font-size-13px;
@@ -21,6 +28,10 @@
     @include mobile {
       width: rem(50px);
     }
+
+    position: absolute;
+    top: rem(30px);
+    left: rem(30px);
   }
 
   &__header {
@@ -47,6 +58,10 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 11%;
+    width: 80%;
   }
 
   &__title {
@@ -65,6 +80,9 @@
     margin: rem(15px) 0 rem(40px);
     max-width: 100%;
     text-align: center;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    padding: rem(15px);
   }
 
   &__subtitle {

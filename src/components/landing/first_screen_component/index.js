@@ -18,6 +18,7 @@ const FirstScreenComponent = () => {
   const intl = useIntl();
   return (
     <div className="first-screen-component">
+      <div className="first-screen-component__bg-image"></div>
       <div className="first-screen-component__header">
         <img
           className="first-screen-component__logo"

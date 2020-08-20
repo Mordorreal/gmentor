@@ -14,7 +14,7 @@ import FooterComponent from '../components/landing/footer_component';
 const LandingPage = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO title="Gmentor" />
       <FirstScreenComponent />
       <SecondScreenComponent />
       <ThirdScreenComponent />
