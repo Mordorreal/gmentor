@@ -9,7 +9,6 @@ const pathToVariables = resolve(
 const pathToMixins = resolve(__dirname, 'src', 'components', 'mixins.scss');
 
 module.exports = {
-  pathPrefix: `/gmentor`,
   siteMetadata: {
     title: `GMentor`,
     description: `GMentor - find your mentors!`,
