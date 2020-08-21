@@ -15,7 +15,7 @@ import SupportChatComponent from '../components/support_chat_component';
 const LandingPage = () => {
   return (
     <Layout>
-      <SEO title="Gmentor" />
+      <SEO title="Find your mentors!" />
       <FirstScreenComponent />
       <SecondScreenComponent />
       <ThirdScreenComponent />

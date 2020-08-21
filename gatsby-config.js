@@ -18,6 +18,18 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GMentor - find your mentors!`,
+        short_name: `GMentor`,
+        start_url: `/`,
+        background_color: `#4ebde7`,
+        theme_color: `#254483`,
+        display: `standalone`,
+        icon: `src/common/images/logo.svg`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
