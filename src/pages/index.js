@@ -10,6 +10,7 @@ import FifthScreenComponent from '../components/landing/fifth_screen_component';
 import SixthScreenComponent from '../components/landing/sixth_screen_component';
 import SubscribeComponent from '../components/landing/subscribe_component';
 import FooterComponent from '../components/landing/footer_component';
+import SupportChatComponent from '../components/support_chat_component';
 
 const LandingPage = () => {
   return (
@@ -23,6 +24,7 @@ const LandingPage = () => {
       <FifthScreenComponent />
       <SixthScreenComponent />
       <FooterComponent />
+      <SupportChatComponent />
     </Layout>
   );
 };
