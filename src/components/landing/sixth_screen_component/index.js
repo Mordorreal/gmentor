@@ -27,7 +27,7 @@ const SixthScreenComponent = () => {
         />
       </div>
       <div className="sixth-screen-component__button">
-        <ButtonComponent isOrange onClick={handleSubscribeClick}>
+        <ButtonComponent isPrimary onClick={handleSubscribeClick}>
           {intl.formatMessage({ id: 'i_want_to' })}
         </ButtonComponent>
       </div>

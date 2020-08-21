@@ -5,7 +5,7 @@ import './copyright_component.scss';
 const CopyrightComponent = () => {
   return (
     <div className="copyright-component">
-      {`Copyright © ${new Date().getFullYear()}. All rights reserved`}
+      {`Copyright © 2018 - ${new Date().getFullYear()}. All rights reserved`}
     </div>
   );
 };

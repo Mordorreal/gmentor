@@ -30,7 +30,7 @@ const FirstScreenComponent = () => {
         <div className="first-screen-component__title">
           <div className="first-screen-component__text first-screen-component__text_title">
             {intl.formatMessage({ id: 'first_page_your' })}
-            <span className="first-screen-component__text_orange">
+            <span className="first-screen-component__text_primary">
               {intl.formatMessage({ id: 'first_page_future' })}
             </span>
             {intl.formatMessage({ id: 'first_page_your_hands' })}
@@ -40,19 +40,15 @@ const FirstScreenComponent = () => {
           </div>
           <div className="first-screen-component__text first-screen-component__text_title">
             {intl.formatMessage({ id: 'first_page_reach_it' })}
-            <span className="first-screen-component__text_orange">
+            <span className="first-screen-component__text_primary">
               {intl.formatMessage({ id: 'first_page_faster' })}
             </span>
           </div>
         </div>
-        <div className="first-screen-component__subtitle">
-          <div className="first-screen-component__text first-screen-component__text_orange">
-            {intl.formatMessage({ id: 'first_page_can_born' })}
-          </div>
-        </div>
+        <div className="first-screen-component__subtitle"></div>
         <div className="first-screen-component__buttons">
           <div className="first-screen-component__button">
-            <ButtonComponent isOrange onClick={handleSubscribeClick}>
+            <ButtonComponent isPrimary onClick={handleSubscribeClick}>
               {intl.formatMessage({ id: 'first_page_want_to_learn' })}
             </ButtonComponent>
           </div>

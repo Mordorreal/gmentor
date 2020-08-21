@@ -23,12 +23,11 @@
   width: 100%;
 
   &__logo {
-    width: rem(100px);
-
     @include mobile {
       width: rem(50px);
     }
 
+    width: rem(60px);
     position: absolute;
     top: rem(30px);
     left: rem(30px);
@@ -124,7 +123,7 @@
       text-transform: uppercase;
     }
 
-    &_orange {
+    &_primary {
       color: $main-primary;
     }
   }
