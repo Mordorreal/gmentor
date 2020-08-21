@@ -13,6 +13,7 @@ module.exports = {
     title: `GMentor`,
     description: `GMentor - find your mentors!`,
     author: `@mordorreal`,
+    siteUrl: 'https://gmentor.online/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -70,5 +71,6 @@ module.exports = {
         redirect: true,
       },
     },
+    'gatsby-plugin-cname',
   ],
 };

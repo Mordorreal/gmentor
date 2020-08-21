@@ -1,9 +1,19 @@
 .first-screen-component {
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-13px;
+  height: 100vh;
+  min-height: rem(600px);
+  width: 100%;
+  background: $black;
+
   &__bg-image {
     @include mobile {
       background: $primary-to-secondary-gradient;
       min-height: 29rem;
-      height: 29rem;
+      height: 100%;
+      width: 100%;
+      filter: none;
     }
 
     background-image: url(../../../common/images/main-background.jpg);
@@ -15,13 +25,6 @@
     background-size: cover;
     display: table;
   }
-
-  display: flex;
-  flex-direction: column;
-  font-size: $font-size-13px;
-  height: 100vh;
-  min-height: rem(600px);
-  width: 100%;
 
   &__logo {
     @include mobile {
@@ -67,6 +70,7 @@
   &__title {
     @include mobile {
       margin: rem(30px) 0;
+      background: none;
     }
 
     @include tablet {
@@ -98,9 +102,8 @@
       margin: 0 0 rem(60px);
     }
 
-    margin: 0 0 rem(70px);
+    margin: 0 0 rem(100px);
     max-width: rem(610px);
-    text-align: center;
   }
 
   &__text {
