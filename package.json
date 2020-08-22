@@ -4,6 +4,7 @@
   "version": "0.2.0",
   "author": "Denis Savchuk <mordorreal@gmail.com>",
   "dependencies": {
+    "browser-lang": "^0.1.0",
     "classnames": "^2.2.6",
     "extract-text-webpack-plugin": "^3.0.2",
     "gatsby": "^2.23.12",

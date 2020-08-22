@@ -58,6 +58,14 @@
   }
 
   &__main-container {
+    @include tablet {
+      top: 12%;
+    }
+
+    @include desktop-small {
+      top: 12%;
+    }
+
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -74,11 +82,11 @@
     }
 
     @include tablet {
-      margin: rem(10px) 0 rem(10px);
+      margin: rem(5px) 0 rem(5px);
     }
 
     @include desktop-small {
-      margin: rem(15px) 0 rem(30px);
+      margin: rem(5px) 0 rem(5px);
     }
 
     margin: rem(15px) 0 rem(40px);
