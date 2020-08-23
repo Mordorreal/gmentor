@@ -21,11 +21,13 @@ const FirstScreenComponent = () => {
     <div className="first-screen-component">
       <div className="first-screen-component__bg-image"></div>
       <div className="first-screen-component__header">
-        <img
-          className="first-screen-component__logo"
-          src={Logo}
-          alt="GMentor"
-        />
+        <a href="https://gmentor.online" alt="GMentor logo">
+          <img
+            className="first-screen-component__logo"
+            src={Logo}
+            alt="GMentor"
+          />
+        </a>
         <Language />
       </div>
       <div className="first-screen-component__main-container">

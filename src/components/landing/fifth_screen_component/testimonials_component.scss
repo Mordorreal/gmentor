@@ -16,4 +16,10 @@
     display: flex;
     justify-content: space-around;
   }
+
+  &__counters {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+  }
 }

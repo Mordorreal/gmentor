@@ -16,16 +16,19 @@ const Language = () => {
       <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
           languages.map((language) => (
-            <a
+            <div
               className="language-component__link"
               key={language}
               onClick={() => changeLocale(language)}
+              onKeyDown={() => changeLocale(language)}
+              role="button"
+              tabIndex="0"
             >
               <img
                 className="language-component__icon"
                 src={languageName[language]}
               />
-            </a>
+            </div>
           ))
         }
       </IntlContextConsumer>

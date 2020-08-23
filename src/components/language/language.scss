@@ -10,9 +10,9 @@
   flex-direction: row;
   height: rem(30px);
   width: rem(100px);
+  justify-content: space-around;
 
   &__link {
-    flex: 1;
     cursor: pointer;
   }
 
