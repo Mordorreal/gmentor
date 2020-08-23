@@ -10,6 +10,12 @@ const languageName = {
   ru: RussianFlag,
 };
 
+const handleKeyDown = (language) => (event) => {
+  if (event.key === 'Enter' || event.key === 'Space') {
+    changeLocale(language);
+  }
+};
+
 const Language = () => {
   return (
     <div className="language-component">
@@ -20,11 +26,12 @@ const Language = () => {
               className="language-component__link"
               key={language}
               onClick={() => changeLocale(language)}
-              onKeyDown={() => changeLocale(language)}
+              onKeyDown={handleKeyDown(language)}
               role="button"
               tabIndex="0"
             >
               <img
+                alt={`${language} icon`}
                 className="language-component__icon"
                 src={languageName[language]}
               />
