@@ -21,12 +21,14 @@ const SixthScreenComponent = () => {
     <div className="sixth-screen-component">
       <DoodleComponent type="lines" />
       <div className="sixth-screen-component__title">
+        <TitleComponent title={intl.formatMessage({ id: 'buy_ticket' })} />
+        <br />
         <TitleComponent
-          title={intl.formatMessage({ id: 'buy_ticket' })}
-          subtitle={intl.formatMessage({ id: 'individual_education' })}
+          title={intl.formatMessage({ id: 'individual_education' })}
         />
       </div>
       <div className="sixth-screen-component__button">
+        <br />
         <ButtonComponent isPrimary onClick={handleSubscribeClick}>
           {intl.formatMessage({ id: 'i_want_to' })}
         </ButtonComponent>

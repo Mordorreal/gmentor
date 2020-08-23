@@ -59,7 +59,7 @@ const FirstScreenComponent = () => {
         <div className="first-screen-component__buttons">
           <div className="first-screen-component__button">
             <ButtonComponent isPrimary onClick={handleSubscribeClick}>
-              {intl.formatMessage({ id: 'first_page_want_to_learn' })}
+              {intl.formatMessage({ id: 'i_want_to' })}
             </ButtonComponent>
           </div>
         </div>

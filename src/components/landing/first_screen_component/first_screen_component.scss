@@ -78,7 +78,8 @@
   &__title {
     @include mobile {
       margin: rem(30px) 0;
-      background: none;
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.2); /* Black w/opacity/see-through */
     }
 
     @include tablet {

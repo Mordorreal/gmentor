@@ -1,7 +1,7 @@
 .footer-component {
   @include mobile {
-    justify-content: space-between;
-    padding: 1.07143rem 0.5rem;
+    justify-content: space-around;
+    padding: 1rem 1rem;
   }
 
   @include tablet {
