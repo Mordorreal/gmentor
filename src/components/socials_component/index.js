@@ -12,11 +12,16 @@ const SocialsComponent = () => {
   return (
     <div className="socials-component">
       <div className="socials-component__icon">
-        <a tabIndex="0" href="" target="_blank" rel="noopener noreferrer">
+        <a
+          tabIndex="0"
+          href="https://twitter.com/gmentor4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <TwitterIcon width="28px" />
         </a>
       </div>
-      <div className="socials-component__icon">
+      {/* <div className="socials-component__icon">
         <a tabIndex="0" href="" target="_blank" rel="noopener noreferrer">
           <FacebookIcon width="28px" />
         </a>
@@ -25,7 +30,7 @@ const SocialsComponent = () => {
         <a tabIndex="0" href="" target="_blank" rel="noopener noreferrer">
           <LinkedInIcon width="28px" />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

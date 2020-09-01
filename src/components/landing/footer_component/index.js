@@ -28,9 +28,7 @@ const FooterComponent = () => {
 
   const links = (
     <div className="footer-component__links">
-      <a href="https://blog.gmentor.online/">
-        {intl.formatMessage({ id: 'blog' })}
-      </a>
+      <a href="https://train-me.space">{intl.formatMessage({ id: 'blog' })}</a>
     </div>
   );
 
